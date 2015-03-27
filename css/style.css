@@ -1,0 +1,11 @@
+body {
+
+}
+
+
+.spinner svg {
+  width: 200px;
+  height: 200px;
+  stroke: #444;
+  fill: #444;
+}

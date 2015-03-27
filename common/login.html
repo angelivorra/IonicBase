@@ -1,0 +1,16 @@
+<ion-view padding="true" view-title="Bienvenido">
+  <ion-content >
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Ip" ng-model="data.ip">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Usuario" ng-model="data.usuario">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Contraseña" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
+  </ion-content>
+</ion-view>
