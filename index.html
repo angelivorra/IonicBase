@@ -4,21 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-        <title>Q10 Estadísticas</title>
+        <title>Project Title</title>
 
         <script src="lib/ionic/js/ionic.bundle.js"></script>
 
         <!-- cordova script (this will be a 404 during development) -->
         <script src="js/ng-cordova.min.js"></script>
         <script src="cordova.js"></script>
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <!-- Sass configuration
         <link href="css/ionic.app.css" rel="stylesheet">
-
+        -->
+        <!-- HighCharts Javascript Libraries
         <script src="lib/highcharts-release/adapters/standalone-framework.js"></script>
         <script src="lib/highcharts-release/highcharts.js"></script>
         <script src="lib/highcharts-ng/dist/highcharts-ng.js"></script>
+        -->
 
+        <!-- Insert here your controllers -->
 
-        <script src="js/controllers/comunes.js"></script>
+        <script src="js/controllers/common.js"></script>
         <script src="js/services/services.js"></script>
         <script src="js/app.js"></script>
 
@@ -35,22 +40,16 @@
               </ion-nav-buttons>
 
           </ion-nav-bar>
-          <ion-nav-view name="contenido"></ion-nav-view>
-<!--
-                <ion-header-bar class="bar-positive">
-                    <button class="button button-icon ion-navicon" ng-click="toggleLeft()" ng-hide="$exposeAside.active"></button>
-                    <h1 class="title">Bienvenido</h1>
-                </ion-header-bar>
-                <ion-nav-view name="contenido">MenuContent</ion-nav-view>-->
+                <ion-nav-view name="mainContent"></ion-nav-view>
             </ion-side-menu-content>
 
             <ion-side-menu expose-aside-when="large">
                 <ion-header-bar class="bar-assertive">
-                    <h1 class="title item-input item-select">
-                        Q10grupo
+                    <h1 class="title">
+                        Left Menu
                     </h1>
                 </ion-header-bar>
-                <ion-nav-view name="menu">MenuItems</ion-nav-view>
+                <ion-nav-view name="menuContent"></ion-nav-view>
             </ion-side-menu>
         </ion-side-menus>
     </body>

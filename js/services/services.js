@@ -5,13 +5,12 @@ angular.module('ionicApp.services', ['ionic'])
     loginUser: function(user, pass, server) {
       var deferred = $q.defer();
       var promise = deferred.promise;
+      //Here you can define your server base url
       var url = 'https://'+server+'/q10/api/index.php/';
-      console.log('user : '+user+ ' pass : '+ pass + ' server: '+server);
 
-      $ionicLoading.show({
-        template: 'Conectando...'
-      });
+      $ionicLoading.show();
 
+/*    Here you can login in your own api
       $http({
         method: 'POST',
         url: url + 'dlogin',
@@ -28,6 +27,15 @@ angular.module('ionicApp.services', ['ionic'])
         $ionicLoading.hide();
         deferred.reject(data.ws_message);
       });
+*/
+
+      $ionicLoading.hide();
+      if (user=='demo') {
+        deferred.resolve('User valid');
+      } else {
+        deferred.reject('User not valid');
+      }
+
 
       promise.success = function(fn) {
         promise.then(fn);
@@ -53,5 +61,3 @@ angular.module('ionicApp.services', ['ionic'])
 
 
 ;
-
-console.log('services loaded');
