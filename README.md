@@ -13,6 +13,14 @@ Take the name after `ionic-starter-`, and that is the name of the template to be
 ```bash
 $ sudo npm install -g ionic cordova
 $ ionic start myApp https://github.com/angelivorra/IonicBase
+$ bower install ngCordova
+```
+
+Optional, install highcharts
+
+```bash
+$ bower install highcharts-release
+$ bower install highcharts-ng
 ```
 
 Then, to run it, cd into `myApp` and run:
