@@ -16,7 +16,7 @@ $ ionic start myApp https://github.com/angelivorra/IonicBase
 $ bower install ngCordova
 ```
 
-Optional, install highcharts
+Optional, install [Highcharts](http://www.highcharts.com/)
 
 ```bash
 $ bower install highcharts-release
