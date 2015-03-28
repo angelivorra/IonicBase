@@ -8,7 +8,7 @@ To use this, either create a new ionic project using the ionic node.js utility, 
 
 ### With the Ionic tool:
 
-Take the name after `ionic-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Use `ionic start` command to create the project. 
 
 ```bash
 $ sudo npm install -g ionic cordova
@@ -30,3 +30,11 @@ $ ionic platform add android
 $ ionic build android
 $ ionic emulate android
 ```
+
+To test on android device or :
+
+```bash
+$ ionic serve
+```
+
+To test on your browser.
