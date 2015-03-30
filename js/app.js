@@ -1,7 +1,7 @@
 var appVersion = "0.1";
 var preferences = window.localStorage;
 
-angular.module('ionicApp', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionicApp.services'])
+angular.module('ionicApp', ['ionic', 'ngCordova', 'highcharts-ng', 'ionicApp.controllers', 'ionicApp.services'])
 
 .run(function($ionicPlatform,$rootScope) {
   $ionicPlatform.ready(function() {
@@ -44,7 +44,7 @@ angular.module('ionicApp', ['ionic', 'ngCordova', 'ionicApp.controllers', 'ionic
         templateUrl: 'common/login.html',
         controller: 'LoginController'
       },
-      'menu' :{
+      'menuContent' :{
         menuContent: 'common/empty.html'
       }
     }

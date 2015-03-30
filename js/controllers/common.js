@@ -5,14 +5,15 @@ angular.module('ionicApp.controllers', ['ionic','ionicApp.services'])
 
   $scope.data = {
     ip : preferences.getItem('servidor'),
-    usuario : preferences.getItem('usuario'),
+    user : preferences.getItem('user'),
     password : ''
   };
 
   $scope.login = function() {
         LoginService.loginUser($scope.data.user, $scope.data.password,$scope.data.ip).success(function(data) {
-          preferences.setItem('user',$scope.data.usuario);
-          $state.go('menu');
+          console.log('usuario :'+$scope.data.user);
+          preferences.setItem('user',$scope.data.user);
+          $state.go('ventas');
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Error',

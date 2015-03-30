@@ -10,7 +10,7 @@ angular.module('ionicApp.services', ['ionic'])
 
       $ionicLoading.show();
 
-/*    Here you can login in your own api
+      //Here you can login in your own api
       $http({
         method: 'POST',
         url: url + 'dlogin',
@@ -20,14 +20,15 @@ angular.module('ionicApp.services', ['ionic'])
         },
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       }).success(function(data, status, headers, config) {
-        entorno.setItem('q10url',url);
+        preferences.setItem('url',url);
         $ionicLoading.hide();
         deferred.resolve(data);
       }).error(function(data, status, headers, config, statusText) {
         $ionicLoading.hide();
         deferred.reject(data.ws_message);
       });
-*/
+
+      /*
 
       $ionicLoading.hide();
       if (user=='demo') {
@@ -35,7 +36,7 @@ angular.module('ionicApp.services', ['ionic'])
       } else {
         deferred.reject('User not valid');
       }
-
+      */
 
       promise.success = function(fn) {
         promise.then(fn);
